@@ -5,6 +5,7 @@ import productRoutes from './routes/products.routes'
 const app = express();
 
 app.set('packageJson', pkg);
+app.use(express.json())
 app.use(morgan('dev'));
 
 app.get('/', (request, response) => {
