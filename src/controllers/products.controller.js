@@ -10,7 +10,10 @@ export const createProduct = async (request, response) => {
     response.status(201).json(productSaved);
 }
 
-export const getProducts = (request, response) => { response.json("hola")}
+export const getProducts = async (_, response) => { 
+    const products = await Product.find()
+    response.json(products)
+}
 
 export const getProductById = (request, response) => {}
 
