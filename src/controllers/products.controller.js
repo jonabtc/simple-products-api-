@@ -15,8 +15,12 @@ export const getProducts = async (_, response) => {
     response.json(products)
 }
 
-export const getProductById = (request, response) => {}
+export const getProductById = async (request, response) => {
+    const product = await Product.findById(request.params.productId);
 
-export const updateProductById = (request, response) => {}
+    response.json(product)
+}
 
-export const deleteProductById = (request, response) => {}
+export const updateProductById = async (request, response) => {}
+
+export const deleteProductById = async (request, response) => {}
