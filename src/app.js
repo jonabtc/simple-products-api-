@@ -1,4 +1,5 @@
 import { createRoles } from './libs/initialSetup';
+import authRoutes from './routes/auth.routes'
 import express from 'express';
 import morgan from 'morgan';
 import pkg from '../package.json'
@@ -21,5 +22,6 @@ app.get('/', (request, response) => {
 })
 
 app.use('/api/products', productRoutes)
+app.use('/api/auth', authRoutes)
 
 export default app;
