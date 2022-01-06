@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "9d8c04f3-3b58-47c2-ac46-5099d3961cbb",
+		"name": "API Products Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2RkZmVhNDEyY2EwZTZhMWYwZDZmNCIsImlhdCI6MTY0MDg5NTgyNywiZXhwIjoxNjQwOTgyMjI3fQ.QZTTSJD-iXCk9KlDb5hLY7VW7wbUWp7OlRUL4RpUYdw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"laptop xiaomi 3c\",\n    \"category\": \"laptop\",\n    \"price\": 1999.87,\n    \"imageURL\":\"https://www.bhphotovideo.com/images/images500x500/razer_rz09_0409aed3_r3u1_razer_blade_15_advanced_1630365643_1643494.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:productId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/products/61ccb8b3bcc118e97d732330",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products",
+								"61ccb8b3bcc118e97d732330"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:productId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"laptop hp envy17\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/products/61ccb8b3bcc118e97d732330",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products",
+								"61ccb8b3bcc118e97d732330"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:productId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"laptop hp\",\n    \"category\": \"laptop\",\n    \"price\": 999.87,\n    \"imgURL\":\"https://www.bhphotovideo.com/images/images500x500/razer_rz09_0409aed3_r3u1_razer_blade_15_advanced_1630365643_1643494.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/products/61ccb8b3bcc118e97d732330",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products",
+								"61ccb8b3bcc118e97d732330"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2RkZmVhNDEyY2EwZTZhMWYwZDZmNCIsImlhdCI6MTY0MDg5NTgyNywiZXhwIjoxNjQwOTgyMjI3fQ.QZTTSJD-iXCk9KlDb5hLY7VW7wbUWp7OlRUL4RpUYdw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auths",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Jones\",\n    \"email\": \"Jones@email.com\",\n    \"password\": \"password\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"Joe@email.com\",\n    \"password\": \"password\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
